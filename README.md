@@ -13,11 +13,18 @@ You need to have access to a QCS tenant and you need to setup an OAuth Client.
 
 ## Get started
 
-1. Install project `npm install`
+1. Install project `pnpm install`
 2. Modify some config in `App.tsx`
    1. Change the host in the `hostConfig` variable to a QCS tenant you have access to
    2. Change the clientId to your OAuth clientId
-   3. Go into the examples folder and set the App ID to an app you have access to on the files
+   3. Go into the examples folder and set the App ID to an app you have access to on the files `AnalyticsChart.tsx`, `ClassicApp.tsx` and `SheetList.tsx`
    4. Also change Sheet ID (optional) and/or the Object ID in the examples
 3. Start the dev server `npm run dev`
 4. Open <https://localhost:5173>
+
+## Using overrides
+
+To use overrides you need to edit the local storage settings both for localhost:5173 and the tenant-url.
+
+- Add a `import-map-override:@qmfe/<id>` = `//localhost:<port>/qmfe-<id>.js` to both locations in local storage.
+- To remove the overrides you'll need to remove the entries in local storage.

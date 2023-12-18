@@ -6,6 +6,7 @@ import SidePanel from "./components/SidePanel";
 import TopBar from "./components/TopBar";
 import AnalyticsChart from "./examples/AnalyticsChart";
 import ClassicApp from "./examples/ClassicApp";
+import SheetList from "./examples/SheetList";
 
 const hostConfig: HostConfig = {
   host: "<tenant.qlikcloud.com>",
@@ -26,6 +27,7 @@ export default () => (
             <Route path="/" element={<Home />} />
             <Route path="/classic-app" element={<ClassicApp />} />
             <Route path="/analytics-chart" element={<AnalyticsChart />} />
+            <Route path="/sheet-list" element={<SheetList />} />
             {/* Add more routes here */}
           </Routes>
         </div>
