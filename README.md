@@ -6,6 +6,15 @@ The `qlik-embed` libraries are under development so the code here can break when
 
 ## Prerequisets
 
+### Using Cookies
+
+You need to have access to a QCS tenant and you need to setup a Web Integration ID.
+
+- Add a web integration id in Management Console
+- Add <https://localhost:5173> to allowed origins
+
+### Using Oauth2
+
 You need to have access to a QCS tenant and you need to setup an OAuth Client.
 
 - Allow origins should include <https://localhost:5173>
@@ -19,7 +28,7 @@ You need to have access to a QCS tenant and you need to setup an OAuth Client.
    2. Change the clientId to your OAuth clientId
    3. Go into the examples folder and set the App ID to an app you have access to on the files `AnalyticsChart.tsx`, `ClassicApp.tsx` and `SheetList.tsx`
    4. Also change Sheet ID (optional) and/or the Object ID in the examples
-3. Start the dev server `npm run dev`
+3. Start the dev server `pnpm run dev`
 4. Open <https://localhost:5173>
 
 ## Using overrides

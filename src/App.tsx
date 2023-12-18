@@ -10,11 +10,21 @@ import SheetList from "./examples/SheetList";
 
 const hostConfig: HostConfig = {
   host: "<tenant.qlikcloud.com>",
+  webIntegrationId: "<web-integration-id>",
+  authType: "cookie",
+};
+
+/*
+OR Use
+
+const hostConfig: HostConfig = {
+  host: "<tenant.qlikcloud.com>",
   clientId: "<client-id>",
   redirectUri: "https://localhost:5173/oauth-callback.html",
   accessTokenStorage: "session",
   authType: "oauth2",
 };
+*/
 
 export default () => (
   <QlikEmbedConfig.Provider value={hostConfig}>
