@@ -1,5 +1,12 @@
-import "./TopBar.css";
+export type TopBarProps = {
+  title: string;
+};
 
-const TopBar = () => <div className="top-bar">Qlik Embed Examples</div>;
+const TopBar = ({ title }: TopBarProps) => (
+  <div className="top-bar">
+    <span>{title}</span>
+    <a href="/embed-web-components/home.html">Take me to web-components</a>
+  </div>
+);
 
 export default TopBar;

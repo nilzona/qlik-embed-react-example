@@ -1,19 +1,20 @@
 import { QlikEmbed } from "@qlik/embed-react";
-import "./examples.css";
 
-const ClassicApp = (): JSX.Element => (
+export type ClassicAppProps = {
+  appId: string;
+  sheetId: string;
+};
+
+const ClassicApp = ({ appId, sheetId }: ClassicAppProps): JSX.Element => (
   <div className="container">
     <h1>Qlik Embed React - Qlik Sense app with selection bar</h1>
     <div className="selections-bar">
       <QlikEmbed ui="analytics/selections" appId={appId} />
     </div>
     <div className="viz">
-      <QlikEmbed ui="classic/app" app={appId} sheet={sheetId} />
+      <QlikEmbed ui="classic/app" app={appId} sheet={sheetId} iframe />
     </div>
   </div>
 );
-
-const appId = "<app-id>";
-const sheetId = "<sheet-id>";
 
 export default ClassicApp;

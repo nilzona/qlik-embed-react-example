@@ -14,6 +14,7 @@ export default defineConfig(() => ({
   },
   server: {
     https: true,
+    port: 4000,
   },
   plugins: [
     react(),

@@ -1,7 +1,11 @@
 import { QlikEmbed } from "@qlik/embed-react";
-import "./examples.css";
 
-const ClassicApp = (): JSX.Element => (
+export type AnalyticsChartProps = {
+  appId: string;
+  objectId: string;
+};
+
+const AnalyticsChart = ({ appId, objectId }: AnalyticsChartProps): JSX.Element => (
   <div className="container">
     <h1>Qlik Embed React - Single chart with selection bar</h1>
     <div className="selections-bar">
@@ -13,7 +17,4 @@ const ClassicApp = (): JSX.Element => (
   </div>
 );
 
-const appId = "<app-id>";
-const objectId = "<object-id>";
-
-export default ClassicApp;
+export default AnalyticsChart;

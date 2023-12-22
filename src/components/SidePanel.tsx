@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./SidePanel.css"; // Import the CSS file for styling
 
 const SidePanel = () => (
   <div className="side-panel">

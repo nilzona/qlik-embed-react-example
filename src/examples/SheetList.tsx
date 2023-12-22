@@ -2,9 +2,12 @@ import { type SheetListItem } from "@qlik/api/qix";
 import { QlikEmbedConfig } from "@qlik/embed-react";
 import { useContext, useEffect, useState } from "react";
 import { useApp } from "../hooks/useApp";
-import "./examples.css";
 
-const SheetList = (): JSX.Element => {
+export type SheetListProps = {
+  appId: string;
+};
+
+const SheetList = ({ appId }: SheetListProps): JSX.Element => {
   const hostConfig = useContext(QlikEmbedConfig);
   const app = useApp(appId, hostConfig);
 
@@ -28,12 +31,10 @@ const SheetList = (): JSX.Element => {
     <div className="container">
       <h1>@qlik/api - Show Sheet List</h1>
       {sheets.map((sheet) => (
-        <div key={sheet.qInfo.qId}>{sheet.qData.title}</div>
+        <div key={sheet.qInfo?.qId}>{sheet.qData?.title}</div>
       ))}
     </div>
   );
 };
-
-const appId = "<app-id>";
 
 export default SheetList;
